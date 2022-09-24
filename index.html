@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Search List</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background: rgb(240, 229, 229);
+        text-align: center;
+      }
+      .container .title {
+        background: rgb(241, 161, 161);
+        padding: 20px;
+        text-shadow: 2px 2px 3px #fff;
+        font-size: 46px;
+      }
+      .content {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      /* -------------------------input area-------------------------------- */
+      .search-list {
+        /* background: rgb(107, 78, 78); */
+        padding: 30px;
+        position: relative;
+        width: 100%;
+        margin-bottom: 10%;
+      }
+      .search-list input[type="text"] {
+        width: 80%;
+        height: 50px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        font-size: 17px;
+        border: 2px solid tomato;
+      }
+      ::placeholder {
+        font-size: 17px;
+      }
+      .search-list span {
+        position: absolute;
+        z-index: 1;
+        right: 10%;
+        width: 20%;
+        height: 50px;
+        background: tomato;
+        color: #fff;
+        border-radius: 0 50px 50px 0;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* ---------------------Finished input area---------------------- */
+      .search-items {
+        background: rgb(236, 161, 161);
+        padding: 10px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+      .search-result {
+        font-size: 20px;
+        display: none;
+      }
+      .search_items-content {
+        width: 100%;
+        min-height: 300px;
+        /* background: rgb(248, 93, 93); */
+      }
+      .search_items-content img {
+        width: 70%;
+        /* height: 0%; */
+        border-radius: 20px;
+        object-fit: cover;
+      }
+      .search_items-content button {
+        padding: 10px 30px;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        font-size: 17px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .search_items-content button:hover {
+        background: tomato;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      @media all and (min-width: 770px) {
+        .search-items {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Welcome And Enjoy Your Snacks</h1>
+
+      <p class="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, et!
+        Quae voluptates distinctio cupiditate laudantium, odio odit autem!
+        Deleniti vitae accusantium doloremque illum reiciendis quod minus
+        doloribus hic libero. In!
+      </p>
+      <div class="search-list">
+        <span>Continue</span>
+        <input
+          type="text"
+          placeholder="Choose It"
+          id="inputbox"
+          value="chicken"
+        />
+      </div>
+
+      <p class="search-result">Your Serach Results..</p>
+
+      <div class="search-items"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
